@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   const [projects, setProjects] = useState([]);
-  const [carkItems, setCarkItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
       <h1>Shopping</h1>
