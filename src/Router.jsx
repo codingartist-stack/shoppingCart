@@ -5,14 +5,19 @@ import App from './App.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([
-    { path: '/', element: <App /> },
     {
-      path: 'products',
-      element: <Products />,
-    },
-    {
-      path: 'cart',
-      element: <Cart />,
+      path: '/',
+      element: <App />,
+      children: [
+        {
+          path: 'products',
+          element: <Products />,
+        },
+        {
+          path: 'cart',
+          element: <Cart />,
+        },
+      ],
     },
   ]);
 

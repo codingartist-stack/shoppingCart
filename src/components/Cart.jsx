@@ -5,7 +5,6 @@ const Cart = () => {
     <>
       <h1>Cart</h1>
       <p>pretend buy stuff</p>
-      <NavBar />
     </>
   );
 };
