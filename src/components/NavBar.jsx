@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <>
       <nav>
-        <ul>
+        <ul className="navigation">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -12,7 +12,9 @@ export default function NavBar() {
             <Link to="products">Products</Link>
           </li>
           <li>
-            <Link to="cart">Cart</Link>
+            <Link to="cart" className="iconFont">
+              cart
+            </Link>
           </li>
         </ul>
       </nav>

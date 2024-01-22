@@ -2,3 +2,7 @@
   font-family: 'linearIcons';
   src: url(./assets/fonts/Linearicons/Linearicons-Free.ttf);
 }
+
+.iconFont {
+  font-family: 'linearIcons', 'Courier New', Courier, monospace;
+}
