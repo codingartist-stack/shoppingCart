@@ -6,3 +6,15 @@
 .iconFont {
   font-family: 'linearIcons', 'Courier New', Courier, monospace;
 }
+
+.navigation {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart {
+  justify-self: end;
+}

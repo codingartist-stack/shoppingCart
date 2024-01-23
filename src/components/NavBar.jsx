@@ -12,7 +12,7 @@ export default function NavBar() {
             <Link to="products">Products</Link>
           </li>
           <li>
-            <Link to="cart" className="iconFont">
+            <Link to="cart" className="iconFont cart">
               cart
             </Link>
           </li>
