@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Products from './components/Products.jsx';
 import Cart from './components/Cart.jsx';
 import App from './App.jsx';
+import CardItem from './components/CardItem.jsx';
 
 const Router = () => {
   const router = createBrowserRouter([

@@ -1,10 +1,14 @@
-import NavBar from './NavBar';
+import CardItem from './CardItem';
 
-const Products = () => {
+const Products = ({ products }) => {
   return (
     <>
       <h1>Products</h1>
-      <p>hello there</p>
+      <main className="products">
+        {/* {products.map((item) => {
+          return <CardItem item={item} />;
+        })} */}
+      </main>
     </>
   );
 };
