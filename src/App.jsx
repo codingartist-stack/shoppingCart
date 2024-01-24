@@ -6,15 +6,13 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => {
-    console.log('useEffect ran');
+  // useEffect(() => {
+  //   console.log('useEffect ran');
 
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((json) => setProducts(json));
-  }, []);
-
-  console.log(products);
+  //   fetch('https://fakestoreapi.com/products')
+  //     .then((res) => res.json())
+  //     .then((json) => setProducts(json));
+  // }, []);
 
   return (
     <>
