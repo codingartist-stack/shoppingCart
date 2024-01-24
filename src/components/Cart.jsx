@@ -1,5 +1,3 @@
-import NavBar from './NavBar';
-
 const Cart = () => {
   return (
     <>

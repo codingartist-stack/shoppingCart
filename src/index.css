@@ -17,6 +17,7 @@
 
 .products {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   width: min(80%, 55rem);
