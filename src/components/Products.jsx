@@ -3,7 +3,6 @@ import CardItem from './CardItem';
 
 const Products = () => {
   const products = useLoaderData();
-  console.log(products);
   return (
     <>
       <h1>Products</h1>

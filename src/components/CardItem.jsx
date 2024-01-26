@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+//item has id, title, category, img, price, rating.rate, rating.count, description
+
 const CardItem = ({ item }) => {
   const handleClick = () => {
     console.log('some thing happened');
@@ -7,7 +9,10 @@ const CardItem = ({ item }) => {
 
   return (
     <div className="cardItem" key={item.id}>
-      <img src={item.image} alt={item.title} className="productImage" />
+      <Link to={`/products/${item.id}`}>
+        <img src={item.image} alt={item.title} className="productImage" />
+      </Link>
+
       <Link to={`/products/${item.id}`} key={item.id}>
         {item.title}
       </Link>

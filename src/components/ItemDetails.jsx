@@ -1,8 +1,11 @@
 import { useLoaderData, useParams } from 'react-router-dom';
 
+//item has id, title, category, img, price, rating.rate, rating.count, description
+
 export default function ItemDetails() {
   const { id } = useParams();
   const item = useLoaderData();
+  console.log(item);
   return (
     <>
       <div key={id}>
