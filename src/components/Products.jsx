@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import CardItem from './CardItem';
 
 const Products = () => {

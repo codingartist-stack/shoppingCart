@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const CardItem = ({ item }) => {
   const handleClick = () => {
     console.log('some thing happened');
@@ -6,7 +8,10 @@ const CardItem = ({ item }) => {
   return (
     <div className="cardItem" key={item.id}>
       <img src={item.image} alt={item.title} className="productImage" />
-      <p>{item.title}</p>
+      <Link to={`/products/${item.id}`} key={item.id}>
+        {item.title}
+      </Link>
+      <p>${item.price}</p>
       <button onClick={handleClick}>add to cart</button>
     </div>
   );
