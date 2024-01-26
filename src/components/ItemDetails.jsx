@@ -5,7 +5,12 @@ import { useLoaderData, useParams } from 'react-router-dom';
 export default function ItemDetails() {
   const { id } = useParams();
   const item = useLoaderData();
-  console.log(item);
+
+  const addToCart = () => {
+    console.log('add to cart was clicked');
+    console.log(item);
+  };
+
   return (
     <>
       <div key={id}>
@@ -13,7 +18,7 @@ export default function ItemDetails() {
         <p>{item.description}</p>
         <img src={item.image} alt={item.title} className="productImage" />
         <p>${item.price}</p>
-        <button>Add to Cart</button>
+        <button onClick={addToCart}>Add to Cart</button>
       </div>
     </>
   );

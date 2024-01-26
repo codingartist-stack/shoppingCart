@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const CardItem = ({ item }) => {
   const handleClick = () => {
     console.log('something happened');
+    console.log(item);
   };
 
   return (
