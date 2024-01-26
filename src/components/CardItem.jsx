@@ -1,8 +1,13 @@
 const CardItem = ({ item }) => {
+  const handleClick = () => {
+    console.log('some thing happened');
+  };
+
   return (
     <div className="cardItem" key={item.id}>
       <img src={item.image} alt={item.title} className="productImage" />
-      <button>add to cart</button>
+      <p>{item.title}</p>
+      <button onClick={handleClick}>add to cart</button>
     </div>
   );
 };
