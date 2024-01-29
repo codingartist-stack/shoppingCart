@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 //item has id, title, category, img, price, rating.rate, rating.count, description
 
-const CardItem = ({ item }) => {
+const CardItem = ({ item, addToCart }) => {
   const handleClick = () => {
-    console.log('something happened');
     console.log(item);
+    addToCart(item);
   };
 
   return (

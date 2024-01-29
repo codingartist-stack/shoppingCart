@@ -5,8 +5,11 @@ import App from './App.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import ItemDetails from './components/ItemDetails.jsx';
 import { ItemDetailsLoader } from './components/ItemDetails.jsx';
+import UseCart from './useCart.jsx';
 
 const Router = () => {
+  const { cartItems, addToCart, removeFromCart } = UseCart();
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -15,7 +18,7 @@ const Router = () => {
       children: [
         {
           path: 'products',
-          element: <Products />,
+          element: <Products addToCart={addToCart} />,
           loader: async () => {
             return fetch('https://fakestoreapi.com/products');
           },
