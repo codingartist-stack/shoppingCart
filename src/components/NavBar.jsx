@@ -1,7 +1,13 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar({ cartItems }) {
-  let cartCount = 0;
+  const [cartCount, setCartCount] = useState(0);
+  // useEffect(() => {
+  //   setCartCount((prevCount) => {
+  //     prevCount + 1;
+  //   });
+  // }, [cartItems]);
 
   return (
     <>

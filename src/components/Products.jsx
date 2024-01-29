@@ -7,17 +7,19 @@ const Products = ({ addToCart }) => {
     <>
       <h1>Products</h1>
 
-      <main className="products">
-        {products.map((item) => {
-          return (
-            <CardItem
-              item={item}
-              key={crypto.randomUUID()}
-              addToCart={addToCart}
-            />
-          );
-        })}
-      </main>
+      <div className="grid">
+        <main className="products">
+          {products.map((item) => {
+            return (
+              <CardItem
+                item={item}
+                key={crypto.randomUUID()}
+                addToCart={addToCart}
+              />
+            );
+          })}
+        </main>
+      </div>
     </>
   );
 };
