@@ -9,7 +9,12 @@ export default function NavBar({ cartItems }) {
         <NavLink to="products">Products</NavLink>
 
         <NavLink to="cart" className="iconFont navCart">
-          cart <span className="itemCount">{cartItems.length}</span>
+          cart
+          {cartItems.length > 0 ? (
+            <span className="itemCount">{cartItems.length}</span>
+          ) : (
+            ''
+          )}
         </NavLink>
       </nav>
     </>

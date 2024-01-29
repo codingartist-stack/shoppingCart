@@ -106,6 +106,21 @@ a {
   width: 100%;
 }
 
+.navCart {
+  position: relative;
+}
+
+.itemCount {
+  position: absolute;
+  font-family: Lato, 'Courier New', Courier, monospace;
+  background-color: var(--clr-dark--800);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.15rem 0.5rem;
+  top: 0.4rem;
+  right: 0.5rem;
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
