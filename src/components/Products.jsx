@@ -5,8 +5,6 @@ const Products = ({ addToCart }) => {
   const products = useLoaderData();
   return (
     <>
-      <h1>Products</h1>
-
       <div className="grid">
         <main className="products">
           {products.map((item) => {

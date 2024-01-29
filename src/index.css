@@ -70,7 +70,8 @@ a {
   color: var(--clr-secondary-100);
 }
 
-.navigation a::before {
+.navigation a::before,
+.navigation a.active::before {
   content: ' ';
   position: absolute;
   bottom: 0.75rem;
@@ -82,7 +83,7 @@ a {
 }
 
 .navigation a:hover::before,
-.selected {
+.navigation a.active::before {
   width: 100%;
 }
 
