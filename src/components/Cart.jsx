@@ -16,7 +16,13 @@ const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
       <h1>Cart</h1>
       <main className="cartGrid">
         {cartItems.map((item) => {
-          return <CartItem item={item} key={crypto.randomUUID()} />;
+          return (
+            <CartItem
+              item={item}
+              key={crypto.randomUUID()}
+              removeFromCart={removeFromCart}
+            />
+          );
         })}
       </main>
     </>

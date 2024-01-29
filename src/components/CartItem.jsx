@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 //item has id, title, category, img, price, rating.rate, rating.count, description
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, removeFromCart }) => {
   const handleClick = () => {
-    console.log(item);
+    removeFromCart(item.id);
   };
 
   return (
