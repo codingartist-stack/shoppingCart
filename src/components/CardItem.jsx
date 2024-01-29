@@ -12,7 +12,9 @@ const CardItem = ({ item, addToCart }) => {
       <Link to={`/products/${item.id}`}>
         <img src={item.image} alt={item.title} className="productImage" />
       </Link>
-
+      <p>
+        {item.rating.rate} <span className="iconFont">star</span>
+      </p>
       <Link to={`/products/${item.id}`} key={item.id}>
         {item.title}
       </Link>

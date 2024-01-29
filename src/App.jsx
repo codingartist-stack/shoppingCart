@@ -1,13 +1,12 @@
 import NavBar from './components/NavBar';
 import { Outlet } from 'react-router-dom';
-import UseCart from './useCart.jsx';
 
-function App() {
-  const { cartItems } = UseCart();
-
+function App({ cartItems }) {
   return (
     <>
-      <h1>Shopping</h1>
+      <h1>
+        <span className="iconFont">store</span>Shopping
+      </h1>
       <NavBar cartItems={cartItems} />
       <Outlet />
     </>

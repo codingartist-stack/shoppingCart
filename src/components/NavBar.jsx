@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar({ cartItems }) {
+  console.log(cartItems);
   const [cartCount, setCartCount] = useState(0);
   // useEffect(() => {
   //   setCartCount((prevCount) => {
@@ -21,7 +22,7 @@ export default function NavBar({ cartItems }) {
           </li>
           <li>
             <NavLink to="cart" className="iconFont cartIcon">
-              cart <span>{cartCount > 0 ? ' hello' : ''}</span>
+              cart <span>{cartItems.length}</span>
             </NavLink>
           </li>
         </ul>

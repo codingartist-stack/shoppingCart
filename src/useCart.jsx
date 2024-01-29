@@ -7,7 +7,6 @@ export default function UseCart() {
     setCartItems((prevCart) => {
       return (prevCart = [...prevCart, item]);
     });
-    console.log(cartItems);
   };
 
   const removeFromCart = (id) => {

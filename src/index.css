@@ -4,9 +4,38 @@
   src: url(./assets/fonts/Linearicons/Linearicons-Free.ttf);
 }
 
+:root {
+  --clr-dropShadow: rgb(165, 165, 165, 0.7);
+
+  --clr-primary--600: #427d9d;
+  --clr-secondary-100: #ddf2fd;
+
+  --clr-dark--800: #164863;
+  --clr-neutral--200: #9bbec8;
+}
+
 body {
   font-family: Lato, 'Courier New', Courier, monospace;
   margin: 0;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(1.25rem, 1vw, 1.75rem);
+  padding: 0.5em 1.5em;
+  background-color: var(--clr-primary--600);
+  color: white;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--clr-dark--800);
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
 }
 
 .iconFont {
@@ -15,8 +44,13 @@ body {
 
 .grid {
   display: grid;
-  justify-content: center;
-  background-color: lightblue;
+  padding: 1rem 10rem;
+}
+
+@media screen and (max-width: 65rem) {
+  .grid {
+    padding: 1rem 3rem;
+  }
 }
 
 .navigation {
@@ -25,16 +59,28 @@ body {
   gap: 1rem;
   align-items: center;
   justify-content: space-around;
+
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  background-color: lightgray;
+  background-color: var(--clr-primary--600);
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 
 .productImage {
-  max-width: 7.5rem;
+  max-width: 9rem;
+}
+
+.cardItem {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 7px 7px 15px var(--clr-dropShadow);
+  padding: 1rem 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  align-content: space-around;
+  justify-items: center;
 }

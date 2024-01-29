@@ -13,7 +13,7 @@ const Router = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <App />,
+      element: <App cartItems={cartItems} />,
       errorElement: <ErrorPage />,
       children: [
         {
