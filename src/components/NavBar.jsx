@@ -8,8 +8,8 @@ export default function NavBar({ cartItems }) {
 
         <NavLink to="products">Products</NavLink>
 
-        <NavLink to="cart" className="iconFont cartIcon">
-          cart <span>{cartItems.length}</span>
+        <NavLink to="cart" className="iconFont navCart">
+          cart <span className="itemCount">{cartItems.length}</span>
         </NavLink>
       </nav>
     </>
