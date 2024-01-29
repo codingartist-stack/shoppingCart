@@ -116,9 +116,11 @@ a {
   background-color: var(--clr-dark--800);
   border-radius: 50%;
   font-size: 1.5rem;
-  padding: 0.15rem 0.5rem;
+  padding: 0.25rem 0.6rem;
   top: 0.4rem;
   right: 0.5rem;
+  display: grid;
+  place-items: center;
 }
 
 /* PRODUCTS PAGE */
