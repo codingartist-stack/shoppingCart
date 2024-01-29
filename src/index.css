@@ -44,7 +44,7 @@ a {
 
 .grid {
   display: grid;
-  padding: 1rem 1.5rem;
+  padding: 3rem 1.5rem;
   justify-content: center;
 }
 
