@@ -8,7 +8,7 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div className="cardItem" key={item.id}>
+    <div key={item.id}>
       <Link to={`/products/${item.id}`}>
         <img src={item.image} alt={item.title} className="productImage" />
       </Link>

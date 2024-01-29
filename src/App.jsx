@@ -4,9 +4,7 @@ import { Outlet } from 'react-router-dom';
 function App({ cartItems }) {
   return (
     <>
-      <h1>
-        <span className="iconFont">store</span>Shopping
-      </h1>
+      <h1>4FunShopping</h1>
       <NavBar cartItems={cartItems} />
       <Outlet />
     </>
