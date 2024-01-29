@@ -30,7 +30,13 @@ const Router = () => {
         },
         {
           path: 'cart',
-          element: <Cart />,
+          element: (
+            <Cart
+              cartItems={cartItems}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          ),
         },
       ],
     },

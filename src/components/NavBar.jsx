@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({ cartItems }) {
+  let cartCount = 0;
+
   return (
     <>
       <nav>
@@ -12,8 +14,8 @@ export default function NavBar() {
             <NavLink to="products">Products</NavLink>
           </li>
           <li>
-            <NavLink to="cart" className="iconFont cart">
-              cart
+            <NavLink to="cart" className="iconFont cartIcon">
+              cart <span>{cartCount > 0 ? ' hello' : ''}</span>
             </NavLink>
           </li>
         </ul>
