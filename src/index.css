@@ -5,7 +5,7 @@
 }
 
 :root {
-  --clr-dropShadow: rgb(165, 165, 165, 0.7);
+  --clr-dropShadow: rgba(95, 95, 95, 0.7);
 
   --clr-primary--600: #427d9d;
   --clr-secondary-100: #ddf2fd;
@@ -121,6 +121,7 @@ a {
   right: 0.5rem;
 }
 
+/* PRODUCTS PAGE */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -152,4 +153,22 @@ a {
   background-color: var(--clr-secondary-100);
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+/*  CART PAGE */
+
+.cartGrid {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 7px 7px 15px var(--clr-dropShadow);
+  background-color: white;
 }

@@ -8,16 +8,20 @@ const CartItem = ({ item, removeFromCart }) => {
   };
 
   return (
-    <div key={item.id}>
+    <div key={item.id} className="cartItem">
       <Link to={`/products/${item.id}`}>
         <img src={item.image} alt={item.title} className="productImage" />
       </Link>
 
+      {/* <div className="cartItemInfo"> */}
       <Link to={`/products/${item.id}`} key={item.id}>
         {item.title}
       </Link>
       <p>${item.price}</p>
-      <button onClick={handleClick}>delete</button>
+      <button onClick={handleClick} className="iconFont">
+        trash
+      </button>
+      {/* </div> */}
     </div>
   );
 };

@@ -14,6 +14,9 @@ const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
   return (
     <>
       <h1>Cart</h1>
+      <p>number of items</p>
+      <p>total Price</p>
+      <button>Check Out</button>
       <main className="cartGrid">
         {cartItems.map((item) => {
           return (
@@ -25,6 +28,7 @@ const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
           );
         })}
       </main>
+      <aside></aside>
     </>
   );
 };
