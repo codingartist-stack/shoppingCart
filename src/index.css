@@ -238,6 +238,7 @@ hr {
 .cart {
   display: grid;
   padding: 1rem;
+  padding-bottom: 3rem;
 }
 
 .cartTitle {
