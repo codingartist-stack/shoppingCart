@@ -14,11 +14,15 @@ const CartItem = ({ item, removeFromCart }) => {
       </Link>
 
       {/* <div className="cartItemInfo"> */}
-      <Link to={`/products/${item.id}`} key={item.id}>
+      <Link
+        to={`/products/${item.id}`}
+        key={item.id}
+        className="cartItemITitle"
+      >
         {item.title}
       </Link>
       <p>${item.price}</p>
-      <button onClick={handleClick} className="iconFont">
+      <button onClick={handleClick} className="iconFont deleteBtn">
         trash
       </button>
       {/* </div> */}
