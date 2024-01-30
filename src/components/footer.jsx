@@ -19,7 +19,12 @@ export default function Footer() {
           <img src={mediumLogo} alt="medium Logo" className="footerIcon" />
           <img src={youtubeLogo} alt="Youtube Icon" className="footerIcon" />
         </div>
-        <div>thank you for visiting</div>
+
+        <div className="footerFlex">
+          <p>thank you for visiting</p>
+          <p className="siteTitle">4FunShopping</p>
+          <p>made Jan 2024</p>
+        </div>
       </footer>
     </>
   );
