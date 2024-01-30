@@ -1,35 +1,45 @@
-// import { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import CartItem from './CartItem';
 
 const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
-  // const totalPrice = useMemo(() => {
-  //   return products.reduce(
-  //     (total, product) => total + product.price * product.quantity,
-  //     0
-  //   );
-  // }, [products]);
+  // const [totalPrice, setTotalPrice] = useState(0);
 
-  console.log(cartItems);
+  let totalPrice = 0;
+
+  const calculateTotal = () => {
+    cartItems.forEach((item) => {
+      totalPrice += item.price;
+    });
+
+    totalPrice = totalPrice.toFixed(2);
+  };
+
+  calculateTotal();
 
   return (
-    <>
-      <h1>Cart</h1>
-      <p>number of items</p>
-      <p>total Price</p>
-      <button>Check Out</button>
-      <main className="cartGrid">
+    <main className="cart">
+      <h1 className="cartTitle">Your Cart Items: {cartItems.length}</h1>
+
+      <p className="total">Total Price: ${totalPrice}</p>
+      <button className="checkOutBtn">Check Out</button>
+      <div className="cartGrid">
+        <hr />
         {cartItems.map((item) => {
           return (
-            <CartItem
-              item={item}
-              key={crypto.randomUUID()}
-              removeFromCart={removeFromCart}
-            />
+            <>
+              <CartItem
+                item={item}
+                key={crypto.randomUUID()}
+                removeFromCart={removeFromCart}
+              />{' '}
+              <hr />
+            </>
           );
         })}
-      </main>
-      <aside></aside>
-    </>
+      </div>
+      <p className="total">Total Price: ${totalPrice}</p>
+      <button className="checkOutBtn">Check Out</button>
+    </main>
   );
 };
 

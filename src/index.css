@@ -85,7 +85,7 @@ a {
   justify-content: space-around;
 
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  background-color: var(--clr-primary--600);
+  background-color: var(--clr-dark--800);
 }
 
 @media screen and (max-width: 30rem) {
@@ -128,7 +128,7 @@ a {
 .itemCount {
   position: absolute;
   font-family: Lato, 'Courier New', Courier, monospace;
-  background-color: var(--clr-dark--800);
+  background-color: var(--clr-primary--600);
   border-radius: 50%;
   font-size: 1.5rem;
   padding: 0.25rem 0.6rem;
@@ -231,6 +231,26 @@ a {
 
 /*  CART PAGE */
 
+hr {
+  width: 100%;
+}
+
+.cart {
+  display: grid;
+  padding: 1rem;
+}
+
+.cartTitle {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  margin: 0;
+}
+.total {
+  text-align: center;
+  font-size: large;
+  margin: 1rem;
+}
+
 .cartGrid {
   display: grid;
   gap: 2rem;
@@ -244,6 +264,16 @@ a {
   padding: 1.5rem;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.checkOutBtn {
+  justify-self: center;
+  padding: 1rem 5rem;
+  transition: 0.3s;
+}
+
+.checkOutBtn:hover {
+  padding: 1.25rem 5.5rem;
 }
 
 @media screen and (max-width: 50rem) {
@@ -268,7 +298,7 @@ a {
 /* FOOTER */
 
 footer {
-  background-color: var(--clr-primary--600);
+  background-color: var(--clr-dark--800);
   display: grid;
   gap: 2.5rem;
   padding: 4rem 2rem;
