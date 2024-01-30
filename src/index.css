@@ -98,6 +98,9 @@ a {
 
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   background-color: var(--clr-dark--800);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 @media screen and (max-width: 30rem) {
