@@ -153,11 +153,13 @@ a {
   font-size: 3em;
   text-shadow: var(--clr-dark--800) 3px 3px;
   padding: 1rem;
+  font-weight: 800;
 }
 
 .landingImg {
   width: 100vw;
-  opacity: 0.9;
+  /* opacity: 0.9; */
+  filter: sepia(60%);
 }
 
 @media screen and (max-width: 50rem) {
