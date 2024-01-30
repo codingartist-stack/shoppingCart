@@ -21,6 +21,12 @@ body {
   margin: 0;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 h1 {
   color: var(--clr-primary--600);
   font-size: 2.5rem;
@@ -31,6 +37,8 @@ h1 {
 
 #root {
   position: relative;
+  display: grid;
+  align-content: space-between;
 }
 
 .siteTitle {
@@ -234,6 +242,45 @@ a {
   border-radius: 5px;
 }
 
+/* ITEM DETAILS */
+
+.itemDetailsContainer {
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
+.itemDetails {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    'image details'
+    'image button';
+  justify-items: center;
+  width: 60%;
+}
+
+@media screen and (max-width: 50rem) {
+  .itemDetails {
+    grid-template-areas:
+      'image'
+      'details'
+      'button';
+  }
+}
+
+.itemDetails img {
+  grid-area: image;
+}
+
+.itemDetailsInfo {
+  grid-area: details;
+}
+
+.itemDetails button {
+  grid-area: button;
+}
+
 /*  CART PAGE */
 
 hr {
@@ -339,6 +386,7 @@ footer {
   display: grid;
   gap: 2.5rem;
   padding: 4rem 2rem;
+  align-self: end;
 }
 
 .footerIcon {

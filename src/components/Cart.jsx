@@ -66,10 +66,16 @@ const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
             );
           })}
         </div>
-        <p className="total">Total Price: ${totalPrice}</p>
-        <button className="checkOutBtn" onClick={handleCheckOutMessage}>
-          Check Out
-        </button>
+        {cartItems.length > 0 ? (
+          <>
+            <p className="total">Total Price: ${totalPrice}</p>
+            <button className="checkOutBtn" onClick={handleCheckOutMessage}>
+              Check Out
+            </button>
+          </>
+        ) : (
+          ''
+        )}
       </main>
     </>
   );
