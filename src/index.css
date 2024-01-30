@@ -208,3 +208,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
 }
+
+.footerP {
+  color: var(--clr-neutral--200);
+}

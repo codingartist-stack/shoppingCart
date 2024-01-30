@@ -21,9 +21,9 @@ export default function Footer() {
         </div>
 
         <div className="footerFlex">
-          <p>thank you for visiting</p>
+          <p className="footerP">thank you for visiting</p>
           <p className="siteTitle">4FunShopping</p>
-          <p>made Jan 2024</p>
+          <p className="footerP">made Jan 2024</p>
         </div>
       </footer>
     </>
