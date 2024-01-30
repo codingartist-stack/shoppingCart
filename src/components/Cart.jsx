@@ -4,9 +4,17 @@ import CartItem from './CartItem';
 const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
   // const [totalPrice, setTotalPrice] = useState(0);
   const [checkOut, setCheckOut] = useState(false);
+  const [purchase, setPurchase] = useState(false);
 
   const handleCheckOutMessage = () => {
     setCheckOut(!checkOut);
+  };
+
+  const purchaseItems = () => {
+    setPurchase(!purchase);
+    cartItems.forEach((item) => {
+      removeFromCart(item.id);
+    });
   };
 
   let totalPrice = 0;
@@ -33,12 +41,23 @@ const Cart = ({ products, cartItems, addToCart, removeFromCart }) => {
               cross
             </button>
             <h3>Check Out</h3>
-            <p>
-              are you ready to check out?
-              <br />
-              Your total is ${totalPrice}
+            {!purchase ? (
+              <>
+                <p>
+                  are you ready to check out?
+                  <br />
+                  Your total is ${totalPrice}
+                </p>
+                <button onClick={purchaseItems}>Purchase Item(s)</button>
+              </>
+            ) : (
+              <p>Thank you for your purchase</p>
+            )}
+
+            <p className="memo">
+              *because this is a fake site it will ask for card or shipping
+              information
             </p>
-            <button>Proceed to Checkout</button>
           </div>
         </aside>
       ) : (
