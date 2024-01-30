@@ -6,6 +6,7 @@ import ErrorPage from './components/ErrorPage.jsx';
 import ItemDetails from './components/ItemDetails.jsx';
 import { ItemDetailsLoader } from './components/ItemDetails.jsx';
 import UseCart from './useCart.jsx';
+import LandingPage from './components/LandingPage.jsx';
 
 const Router = () => {
   const { cartItems, addToCart, removeFromCart } = UseCart();
@@ -16,6 +17,10 @@ const Router = () => {
       element: <App cartItems={cartItems} />,
       errorElement: <ErrorPage />,
       children: [
+        {
+          index: true,
+          element: <LandingPage />,
+        },
         {
           path: 'products',
           element: <Products addToCart={addToCart} />,
