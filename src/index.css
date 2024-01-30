@@ -174,3 +174,16 @@ a {
   box-shadow: 7px 7px 15px var(--clr-dropShadow);
   background-color: white;
 }
+
+/* FOOTER */
+
+footer {
+  background-color: var(--clr-primary--600);
+}
+
+.footerIcon {
+  width: 3rem;
+}
+
+.facebookIcon {
+}
