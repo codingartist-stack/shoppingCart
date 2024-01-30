@@ -30,7 +30,7 @@ const Router = () => {
         },
         {
           path: 'products/:id',
-          element: <ItemDetails />,
+          element: <ItemDetails addToCart={addToCart} />,
           loader: ItemDetailsLoader,
         },
         {
