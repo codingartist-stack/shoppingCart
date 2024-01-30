@@ -158,8 +158,7 @@ a {
 
 .landingImg {
   width: 100vw;
-  /* opacity: 0.9; */
-  filter: sepia(40%);
+  filter: blur(3.5px);
 }
 
 @media screen and (max-width: 50rem) {
