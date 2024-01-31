@@ -100,7 +100,7 @@ a {
   background-color: var(--clr-dark--800);
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 @media screen and (max-width: 30rem) {
@@ -173,7 +173,9 @@ a {
 
 .landingImg {
   width: 100vw;
+  height: 70vh;
   filter: blur(3.5px);
+  object-fit: cover;
 }
 
 @media screen and (max-width: 50rem) {
@@ -360,6 +362,7 @@ hr {
   width: 100vw;
   display: grid;
   place-items: center;
+  z-index: 5;
 }
 
 .checkoutMessage {
